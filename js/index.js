@@ -50,5 +50,10 @@ links[3].textContent = siteContent.nav["nav-item-4"];
 links[4].textContent = siteContent.nav["nav-item-5"];
 links[5].textContent = siteContent.nav["nav-item-6"];
 
+// changed this to see the links variable above done differently
 document.querySelector('a').textContent = siteContent.nav["nav-item-1"]
+
+
+document.querySelector('#cta-img').src = siteContent.cta["img-src"]
+
 
