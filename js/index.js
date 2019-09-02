@@ -56,9 +56,15 @@ document.querySelector('a').textContent = siteContent.nav["nav-item-1"];
 // big circle header image
 document.querySelector('#cta-img').src = siteContent.cta["img-src"];
 
+
+
+
 // DOM IS AWESOME
 document.querySelector('h1').textContent = siteContent.cta.h1.split(' ').join('<br>');
 document.querySelector('button').textContent = siteContent.cta.button;
+
+
+
 
 // Array of class .main-content and h4
 let mainH4 = document.querySelectorAll('.main-content h4');
