@@ -41,23 +41,39 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
 let links = document.querySelectorAll('a');
-// links[0].textContent = siteContent.nav["nav-item-1"];
+links[0].textContent = siteContent.nav["nav-item-1"];
 links[1].textContent = siteContent.nav["nav-item-2"];
 links[2].textContent = siteContent.nav["nav-item-3"];
 links[3].textContent = siteContent.nav["nav-item-4"];
 links[4].textContent = siteContent.nav["nav-item-5"];
 links[5].textContent = siteContent.nav["nav-item-6"];
 
+// appendChild and prepend -------------------------
+
+let nav = document.querySelector('nav');      // capture the element to append
+
+// append new 
+let newAnchor = document.createElement('a');  // create
+newAnchor.textContent = 'Blog';               // add content etc
+newAnchor.setAttribute('href', '#')
+newAnchor.style.color = 'red';
+nav.appendChild(newAnchor);                   // append
+
+// prepend new
+let newAnchor2 = document.createElement('a');  // create
+newAnchor2.textContent = 'Home';               // add content etc
+newAnchor2.setAttribute('href', '#')
+nav.prepend(newAnchor2);                       // append
+
+// --------------------------------------------------
+
+
 
 // links colour to green
 for (let i=0; i<links.length; i++) {
   links[i].style.color = 'green';
 }
-
-// changed this to see the links variable above done differently
-document.querySelector('a').textContent = siteContent.nav["nav-item-1"];
 
 // big circle header image
 document.querySelector('#cta-img').src = siteContent.cta["img-src"];
