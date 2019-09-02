@@ -53,17 +53,30 @@ links[5].textContent = siteContent.nav["nav-item-6"];
 // changed this to see the links variable above done differently
 document.querySelector('a').textContent = siteContent.nav["nav-item-1"];
 
-// middle image
+// big circle header image
 document.querySelector('#cta-img').src = siteContent.cta["img-src"];
 
 // DOM IS AWESOME
 document.querySelector('h1').textContent = siteContent.cta.h1;
 
-// Array of all h4
-let h4 = document.querySelectorAll('.text-content h4');
-h4[0].textContent = siteContent["main-content"]["features-h4"];
-h4[1].textContent = siteContent["main-content"]["about-h4"];
-h4[2].textContent = siteContent["main-content"]["services-h4"];
-h4[3].textContent = siteContent["main-content"]["product-h4"];
-h4[4].textContent = siteContent["main-content"]["vision-h4"];
+// Array of class .main-content and h4
+let mainH4 = document.querySelectorAll('.main-content h4');
+mainH4[0].textContent = siteContent["main-content"]["features-h4"];
+mainH4[1].textContent = siteContent["main-content"]["about-h4"];
+mainH4[2].textContent = siteContent["main-content"]["services-h4"];
+mainH4[3].textContent = siteContent["main-content"]["product-h4"];
+mainH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+// array of class .main-content and p
+let mainP = document.querySelectorAll('.main-content p');
+mainP[0].textContent = siteContent["main-content"]["features-content"];
+mainP[1].textContent = siteContent["main-content"]["about-content"];
+mainP[2].textContent = siteContent["main-content"]["services-content"];
+mainP[3].textContent = siteContent["main-content"]["product-content"];
+mainP[4].textContent = siteContent["main-content"]["vision-content"];
+
+// middle image (banner)
+let banner = document.querySelector('#middle-img');
+banner.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
 
