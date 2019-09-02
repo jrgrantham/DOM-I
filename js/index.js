@@ -50,6 +50,12 @@ links[3].textContent = siteContent.nav["nav-item-4"];
 links[4].textContent = siteContent.nav["nav-item-5"];
 links[5].textContent = siteContent.nav["nav-item-6"];
 
+
+// links colour to green
+for (let i=0; i<links.length; i++) {
+  links[i].style.color = 'green';
+}
+
 // changed this to see the links variable above done differently
 document.querySelector('a').textContent = siteContent.nav["nav-item-1"];
 
@@ -59,12 +65,15 @@ document.querySelector('#cta-img').src = siteContent.cta["img-src"];
 
 
 
+
 // DOM IS AWESOME
 document.querySelector('h1').textContent = siteContent.cta.h1.split(' ').join('<br>');
+
+
+
+
+//button
 document.querySelector('button').textContent = siteContent.cta.button;
-
-
-
 
 // Array of class .main-content and h4
 let mainH4 = document.querySelectorAll('.main-content h4');
