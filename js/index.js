@@ -76,7 +76,8 @@ for (let i=0; i<links.length; i++) {
 }
 
 // big circle header image
-document.querySelector('#cta-img').src = siteContent.cta["img-src"];
+let cirlceImg = document.querySelector('#cta-img');
+cirlceImg.src = siteContent.cta["img-src"];  // changed to variable to use again for stretch
 
 
 
@@ -120,3 +121,10 @@ contactP[2].textContent = siteContent.contact.email;
 
 // footer
 document.querySelector('footer p').textContent = siteContent.footer.copyright
+
+// stretch
+cirlceImg.style.paddingRight = '100px';
+banner.style.width = '500px';
+
+let allH4 = document.querySelectorAll('h4');
+allH4.forEach(h => h.style.textAlign = 'center');
