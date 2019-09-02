@@ -57,7 +57,8 @@ document.querySelector('a').textContent = siteContent.nav["nav-item-1"];
 document.querySelector('#cta-img').src = siteContent.cta["img-src"];
 
 // DOM IS AWESOME
-document.querySelector('h1').textContent = siteContent.cta.h1;
+document.querySelector('h1').textContent = siteContent.cta.h1.split(' ').join('<br>');
+document.querySelector('button').textContent = siteContent.cta.button;
 
 // Array of class .main-content and h4
 let mainH4 = document.querySelectorAll('.main-content h4');
@@ -79,4 +80,12 @@ mainP[4].textContent = siteContent["main-content"]["vision-content"];
 let banner = document.querySelector('#middle-img');
 banner.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+//contact
+document.querySelector('.contact h4').textContent = siteContent.contact["contact-h4"];
+let contactP = document.querySelectorAll('.contact p')
+contactP[0].textContent = siteContent.contact.address;
+contactP[1].textContent = siteContent.contact.phone;
+contactP[2].textContent = siteContent.contact.email;
 
+// footer
+document.querySelector('footer p').textContent = siteContent.footer.copyright
